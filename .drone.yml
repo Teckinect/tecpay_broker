@@ -5,9 +5,9 @@ pipeline:
       - npm install
   publish:
     image: plugins/docker
-    repo: thiagomagro/tecpay-broker
+    repo: teckinect/tecpay-broker
     username:
-      from_secret: u_docker
+      from_secret: u_magro_docker
     password: 
-      from_secret: p_docker
+      from_secret: p_magro_docker
     dry_run: false # remove this to publish.
