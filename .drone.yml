@@ -1,0 +1,13 @@
+pipeline:
+  build:
+    image: node
+    commands:
+      - npm install
+  publish:
+    image: plugins/docker
+    repo: thiagomagro/tecpay-broker
+    username:
+      from_secret: u_docker
+    password: 
+      from_secret: p_docker
+    dry_run: false # remove this to publish.
